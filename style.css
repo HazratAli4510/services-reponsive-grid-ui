@@ -8,7 +8,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto:wght@400;500&display=swap');
 
 body{
-    background-color: #181818;
+    background-image: url(./pexels-fauxels-3183127.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+body::after{
+    content: '';
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: .6;
 }
 .container{
     width: 100%;
@@ -26,7 +38,7 @@ body{
 
 
 .container .main-ui{
-    margin: 100px auto;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(1,1fr);
     row-gap: 1rem;
@@ -65,8 +77,9 @@ body{
     transition: .3s cubic-bezier(.24,.74,.58,1);
 }
 .container .main-ui .box{
-    width: 270px;
+    padding: 2rem;
     height: 200px;
+    width: auto;
     background-color: #000;
     display: flex;
     justify-content: center;
